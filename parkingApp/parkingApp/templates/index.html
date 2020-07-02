@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parking app</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body style="overflow: visible;">	
+		<div class="container" style="overflow: visible;">
+		  <div class="jumbotron">
+		    <h1>Parking detection</h1>
+		    <p>Upload file to detect whether a parking spot is occupied</p>
+		  </div>
+
+		</div>
+
+
+		<div style="margin-top:5%; overflow: visible;" class="container">
+			<div class="panel panel-default" style="overflow: visible;">
+			  <div class="panel-heading">Upload file</div>
+			  <div class="panel-body">
+		  			<form class="login100-form validate-form p-b-33 p-t-5" enctype="multipart/form-data" method= "post" action="/uploadImage">
+
+						<div class="form-group" data-validate="Upload file">
+							<input class="form-control" type="file" name="myfile1" id="myfile" placeholder="Department">
+							<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+						</div>
+
+						<div class="form-group">
+							<button class="btn btn-default">
+								Upload file
+							</button>
+						</div>
+					</form>
+
+
+			  </div>
+			  <div id="map" style="overflow: visible;"></div>
+
+			</div>
+
+		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7jMKcfYYEB2W2Wr9kOWLkdd7j6k14Zhw&callback=initMap"
+    async defer></script>
+
+<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
